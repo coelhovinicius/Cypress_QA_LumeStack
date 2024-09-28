@@ -1,0 +1,14 @@
+Cypress
+
+No console do VSCode:
+- npm init - inicializa um novo projeto;
+- npm install cypress --save-dev - instala o Cypress;
+- npx cypress open - rodar o Cypress;
+- Ao abrir o console do Cypress, escolher testes E2E, escolher o browser e colocar o nome do (no caso, "spec.cy.js");
+- No VSCode, ir para o arquivo CYPRESS-AUTOMATION > cypress > e2e > spec.cy.js;
+- No browser, clicar no ícone de "alvo" e clicar no componente desejado no site e copiar:
+    - Site a ser visitado: cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    - Campo de "login": cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('Admin');
+    - Campo de "senha": cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin123');
+    - Clique no botão de "login", ou "entrar", ou "logar": cy.get('.oxd-button').click();
+    - Verificar se a página logada é a página desejada, verificando e há algum elemento específico nessa página - No caso, a palavra "Dashboard": cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').contains('Dashboard').
